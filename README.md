@@ -29,8 +29,7 @@ Render with the same plugin, and add the styles once to the layout that shows th
 
 ## Documentation
 
-The full documentation is at
-[https://DOCS_SITE_URL/docs/rich-editor-plus-code](https://DOCS_SITE_URL/docs/rich-editor-plus-code).
+The full documentation is in the [`docs` folder](https://github.com/webwizardsusa/rich-editor-plus-code/tree/main/docs).
 
 ## License
 
