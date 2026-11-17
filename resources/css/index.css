@@ -43,19 +43,41 @@
     vertical-align: top;
 }
 
-/* The language menu button shows the language's name instead of an icon. */
-.rep-swatch.rep-code-language-swatch {
+/*
+ * The language menu button shows the language's name instead of an icon (the current item's swatch), styled like the
+ * block switcher beside it: as wide as the name, with a chevron so it reads as a menu.
+ */
+.rep-tool[data-rep-tool='codeBlockLanguage'] {
+    gap: 0.25rem;
     width: auto;
-    min-width: 1.25rem;
-    padding-inline: 0.25rem;
-    box-shadow: none;
-    font-size: 0.75rem;
-    font-weight: 600;
+    min-width: 2.25rem;
+    padding-inline: 0.375rem;
     white-space: nowrap;
 }
 
+.rep-tool[data-rep-tool='codeBlockLanguage']::after {
+    content: '';
+    width: 0.375rem;
+    height: 0.375rem;
+    margin: -0.125rem 0.125rem 0 0.125rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+.rep-swatch.rep-code-language-swatch,
 .rep-tool > .rep-swatch.rep-code-language-swatch {
     width: auto;
+    height: auto;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 /* In the menu the item's label already names the language. */

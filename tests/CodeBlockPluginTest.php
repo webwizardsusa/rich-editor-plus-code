@@ -97,3 +97,20 @@ it('sends the languages, default language and themes to the editor', function ()
             'themes' => ['light' => 'one-light', 'dark' => 'one-dark-pro'],
         ]);
 });
+
+it('defines in the editor every command its tools run', function (): void {
+    $script = file_get_contents(dirname(__DIR__).'/resources/js/code-block.js');
+    $tools = CodeBlockPlugin::make()->getTools();
+
+    $commands = collect($tools)
+        ->flatMap(fn (Tool $tool): array => [$tool->getCommand(), ...array_map(fn ($item): ?string => $item->getCommand(), $tool->getMenu() ?? [])])
+        ->filter()
+        ->reject(fn (string $command): bool => $command === 'updateAttributes')
+        ->unique();
+
+    expect($commands->all())->not->toBeEmpty();
+
+    foreach ($commands as $command) {
+        expect($script)->toMatch("/\\b{$command}:\\s/");
+    }
+});

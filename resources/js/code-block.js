@@ -51,7 +51,7 @@ export function createCodeBlock(options) {
                     (attributes) =>
                     ({ commands }) =>
                         commands.toggleNode(this.name, 'paragraph', { language: defaultLanguage, ...attributes }),
-                setCodeBlockLanguageLanguage:
+                setCodeBlockLanguage:
                     (language) =>
                     ({ commands }) =>
                         commands.updateAttributes(this.name, { language: normalizeLanguage(language) }),
