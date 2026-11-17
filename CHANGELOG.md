@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/webwizardsusa/rich-editor-plus-code/compare/v0.1.0...v0.1.1) (2026-11-17)
+
+
+### Bug Fixes
+
+* make the language menu work, and size its button to the language's name ([#2](https://github.com/webwizardsusa/rich-editor-plus-code/issues/2)) ([b929405](https://github.com/webwizardsusa/rich-editor-plus-code/commit/b92940542fca49926e5204c083d21a53941214d6))
+
 ## 0.1.0 (2026-11-17)
 
 
