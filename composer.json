@@ -1,0 +1,66 @@
+{
+    "name": "webwizardsusa/rich-editor-plus-code",
+    "description": "Code blocks for Rich Editor Plus: pick the language, line numbers and highlighted lines, coloured with Shiki while editing and Phiki when rendered.",
+    "keywords": [
+        "laravel",
+        "filamentphp",
+        "filament",
+        "filament-plugin",
+        "tiptap",
+        "rich-editor",
+        "syntax-highlighting",
+        "phiki",
+        "webwizardsusa"
+    ],
+    "homepage": "https://github.com/webwizardsusa/rich-editor-plus-code",
+    "support": {
+        "issues": "https://github.com/webwizardsusa/rich-editor-plus-code/issues",
+        "source": "https://github.com/webwizardsusa/rich-editor-plus-code"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jamie Holly",
+            "email": "jamie@webwizardsusa.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "phiki/phiki": "^2.2",
+        "spatie/laravel-package-tools": "^1.92",
+        "webwizardsusa/filament-rich-editor-plus": "^0.1.0 || dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webwizardsusa\\RichEditorPlusCode\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webwizardsusa\\RichEditorPlusCode\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webwizardsusa\\RichEditorPlusCode\\RichEditorPlusCodeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^5.2",
+        "pestphp/pest-plugin-laravel": "^5.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

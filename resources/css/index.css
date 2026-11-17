@@ -1,0 +1,64 @@
+/*
+ * Styles for the editor. They build on the custom properties Rich Editor Plus defines on `.rep-editor`, so they follow
+ * the panel's light and dark themes. Rendered content gets its styles from `<x-rich-editor-plus-code::assets />`.
+ */
+
+/* Shiki sets the theme's colours on the block (`--prosemirror-highlight-bg`) and each token (`color`, `--shiki-dark`). */
+.rep-editor .tiptap pre[style*='--prosemirror-highlight'],
+.rep-editor .tiptap pre[style*='--shiki'] {
+    background-color: var(--prosemirror-highlight-bg, var(--shiki-light-bg, var(--rep-code-background)));
+    color: var(--prosemirror-highlight, var(--shiki-light, inherit));
+}
+
+.dark .rep-editor .tiptap pre[style*='--shiki'] {
+    background-color: var(--shiki-dark-bg, var(--rep-code-background));
+    color: var(--shiki-dark, inherit);
+}
+
+.dark .rep-editor .tiptap pre .shiki {
+    color: var(--shiki-dark) !important;
+}
+
+.rep-editor .tiptap pre.rep-code-numbered {
+    padding-left: 0.5rem;
+}
+
+.rep-editor .tiptap pre .rep-code-line-number {
+    display: inline-block;
+    min-width: 2.5ch;
+    margin-right: 1rem;
+    text-align: right;
+    opacity: 0.45;
+    user-select: none;
+}
+
+.rep-editor .tiptap pre .rep-code-highlighted {
+    background: rgb(250 204 21 / 0.25);
+}
+
+.rep-editor .tiptap pre .rep-code-empty-line {
+    display: inline-block;
+    width: 1ch;
+    height: 1lh;
+    vertical-align: top;
+}
+
+/* The language menu button shows the language's name instead of an icon. */
+.rep-swatch.rep-code-language-swatch {
+    width: auto;
+    min-width: 1.25rem;
+    padding-inline: 0.25rem;
+    box-shadow: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rep-tool > .rep-swatch.rep-code-language-swatch {
+    width: auto;
+}
+
+/* In the menu the item's label already names the language. */
+.rep-menu-item > .rep-code-language-swatch {
+    display: none;
+}
