@@ -297,8 +297,8 @@ class CodeBlockPlugin extends CoreCodeBlockPlugin implements ProvidesMarkdownRul
     }
 
     /**
-     * The language from a `language-*` class, with the names for plain text (`text`, `txt`, `plaintext`) read as none,
-     * which is how the editor stores plain text.
+     * The language from a `language-*` class, with the names for plain text (`text`, `txt`, `plaintext`, `plain`) read
+     * as none, which is how the editor stores plain text.
      */
     public static function parseLanguage(?string $language): ?string
     {
