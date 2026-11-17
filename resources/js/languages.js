@@ -82,8 +82,8 @@ export const themes = {
 const plainText = ['text', 'txt', 'plaintext', 'plain']
 
 /**
- * The language id the editor stores for a name from content: aliases resolved, plain text as null. Must match
- * `CodeBlockPlugin::parseLanguage()` for the names that matter.
+ * The language id the editor stores for a name from content, as given, with plain text as null. Aliases are kept:
+ * `grammarFor()` resolves them when colouring. Must match `CodeBlockPlugin::parseLanguage()` for the names that matter.
  */
 export function normalizeLanguage(language) {
     if (typeof language !== 'string' || !/^[A-Za-z0-9_+#-]{1,32}$/.test(language)) {
