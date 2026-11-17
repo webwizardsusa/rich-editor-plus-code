@@ -82,6 +82,14 @@ it('refuses a default language it does not offer', function (): void {
     CodeBlockPlugin::make()->languages(['php' => 'PHP'])->defaultLanguage('sql');
 })->throws(InvalidArgumentException::class);
 
+it('refuses a theme Phiki does not know', function (string $light, string $dark, string $message): void {
+    expect(fn () => CodeBlockPlugin::make()->themes($light, $dark))
+        ->toThrow(InvalidArgumentException::class, $message);
+})->with([
+    'light' => ['github-lite', 'github-dark', 'The light theme [github-lite] is not a theme Phiki knows.'],
+    'dark' => ['github-light', 'github-drak', 'The dark theme [github-drak] is not a theme Phiki knows.'],
+]);
+
 it('sends the languages, default language and themes to the editor', function (): void {
     $options = CodeBlockPlugin::make()
         ->languages(['php' => 'PHP', 'sql' => 'SQL'])
