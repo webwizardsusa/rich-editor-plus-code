@@ -68,7 +68,7 @@ without further changes. Use an id Phiki also knows, so the server highlights th
 ### What Phiki can't do here
 
 The plugin creates its own Phiki instance, so you can't register a custom grammar or theme with Phiki for it. Use
-the grammars and themes Phiki ships with. A theme name Phiki doesn't know makes rendering throw.
+the grammars and themes Phiki ships with. `themes()` refuses a theme name Phiki doesn't know.
 
 ## Adding to the plugin
 

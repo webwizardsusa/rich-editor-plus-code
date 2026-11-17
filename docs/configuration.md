@@ -108,10 +108,9 @@ The editor can colour with these themes:
 Any other theme Phiki knows works for rendered content. The editor then uses `github-light` or `github-dark` in its
 place and logs a warning in the browser console.
 
-> [!WARNING]
-> `themes()` doesn't check the names. A theme Phiki doesn't know makes rendering throw a
-> `Phiki\Exceptions\UnrecognisedThemeException`, so check the spelling against
-> [Phiki's themes](https://github.com/phikiphp/phiki).
+`themes()` checks both names against [Phiki's themes](https://github.com/phikiphp/phiki) and throws an
+`InvalidArgumentException` for one it doesn't know, so a misspelt theme fails where the plugin is configured rather
+than when content renders.
 
 ## Caching
 
