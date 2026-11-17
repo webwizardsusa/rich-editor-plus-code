@@ -29,7 +29,7 @@
         "php": "^8.3",
         "phiki/phiki": "^2.2",
         "spatie/laravel-package-tools": "^1.92",
-        "webwizardsusa/filament-rich-editor-plus": "^0.1.0 || dev-main"
+        "webwizardsusa/filament-rich-editor-plus": "^0.2.0 || dev-main"
     },
     "autoload": {
         "psr-4": {
