@@ -4,6 +4,7 @@ namespace Webwizardsusa\RichEditorPlusCode;
 
 use DOMElement;
 use InvalidArgumentException;
+use Phiki\Theme\ThemeRepository;
 use Webwizardsusa\RichEditorPlus\Plugins\Contracts\TransformsRenderedHtml;
 use Webwizardsusa\RichEditorPlus\Plugins\Core\CodeBlockPlugin as CoreCodeBlockPlugin;
 use Webwizardsusa\RichEditorPlus\Plugins\Markdown\Contracts\ProvidesMarkdownRules;
@@ -141,10 +142,19 @@ class CodeBlockPlugin extends CoreCodeBlockPlugin implements ProvidesMarkdownRul
     }
 
     /**
-     * The Shiki/Phiki themes for light and dark mode, such as `github-light` and `github-dark`.
+     * The Shiki/Phiki themes for light and dark mode, such as `github-light` and `github-dark`. Each must be a theme
+     * Phiki knows, which renders the content.
      */
     public function themes(string $light, string $dark): static
     {
+        $knownThemes = new ThemeRepository;
+
+        foreach (['light' => $light, 'dark' => $dark] as $mode => $theme) {
+            if (! $knownThemes->has($theme)) {
+                throw new InvalidArgumentException("The {$mode} theme [{$theme}] is not a theme Phiki knows.");
+            }
+        }
+
         $this->themes = ['light' => $light, 'dark' => $dark];
         $this->highlighter = null;
 
@@ -297,8 +307,8 @@ class CodeBlockPlugin extends CoreCodeBlockPlugin implements ProvidesMarkdownRul
     }
 
     /**
-     * The language from a `language-*` class, with the names for plain text (`text`, `txt`, `plaintext`) read as none,
-     * which is how the editor stores plain text.
+     * The language from a `language-*` class, with the names for plain text (`text`, `txt`, `plaintext`, `plain`) read
+     * as none, which is how the editor stores plain text.
      */
     public static function parseLanguage(?string $language): ?string
     {
