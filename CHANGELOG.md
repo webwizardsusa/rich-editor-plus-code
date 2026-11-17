@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/webwizardsusa/rich-editor-plus-code/compare/v0.1.1...v0.1.2) (2026-11-17)
+
+
+### Bug Fixes
+
+* find the editor's shared TipTap Vite plugin in a host app's vendor/ directory ([d3aa05a](https://github.com/webwizardsusa/rich-editor-plus-code/commit/d3aa05aae896f9835531b6bf606210fc9efacec2))
+* refuse a theme Phiki does not know in `themes()` ([d3aa05a](https://github.com/webwizardsusa/rich-editor-plus-code/commit/d3aa05aae896f9835531b6bf606210fc9efacec2))
+
 ## [0.1.1](https://github.com/webwizardsusa/rich-editor-plus-code/compare/v0.1.0...v0.1.1) (2026-11-17)
 
 
