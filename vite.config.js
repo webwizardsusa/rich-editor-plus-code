@@ -20,7 +20,7 @@ if (!sharedTiptapPath) {
 const { sharedTiptap } = await import(pathToFileURL(sharedTiptapPath).href)
 
 /**
- * Must match `RichEditorPlusEmbedServiceProvider::assetId()`: `RegistersPluginAssets` looks for
+ * Must match `RichEditorPlusCodeServiceProvider::assetId()`: `RegistersPluginAssets` looks for
  * `dist/{assetId}.js`, `dist/{assetId}.css` and the hot file `public/{assetId}.hot` in the app.
  */
 const assetId = 'rich-editor-plus-code'
