@@ -1,5 +1,12 @@
 # Rich Editor Plus Code
 
+[![Latest version on Packagist](https://img.shields.io/packagist/v/webwizardsusa/rich-editor-plus-code.svg)](https://packagist.org/packages/webwizardsusa/rich-editor-plus-code)
+[![Tests](https://github.com/webwizardsusa/rich-editor-plus-code/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/webwizardsusa/rich-editor-plus-code/actions/workflows/tests.yml)
+[![Total downloads](https://img.shields.io/packagist/dt/webwizardsusa/rich-editor-plus-code.svg)](https://packagist.org/packages/webwizardsusa/rich-editor-plus-code/stats)
+[![PHP version](https://img.shields.io/packagist/dependency-v/webwizardsusa/rich-editor-plus-code/php.svg)](https://packagist.org/packages/webwizardsusa/rich-editor-plus-code)
+[![Rich Editor Plus version](https://img.shields.io/packagist/dependency-v/webwizardsusa/rich-editor-plus-code/webwizardsusa/filament-rich-editor-plus.svg?label=Rich%20Editor%20Plus)](https://github.com/webwizardsusa/filament-rich-editor-plus)
+[![License](https://img.shields.io/packagist/l/webwizardsusa/rich-editor-plus-code.svg)](https://github.com/webwizardsusa/rich-editor-plus-code/blob/main/LICENSE.md)
+
 Code blocks for [Rich Editor Plus](https://github.com/webwizardsusa/filament-rich-editor-plus), with a language
 picker, line numbers and highlighted lines. The editor colours code with [Shiki](https://shiki.style) as you type, and
 rendered content is highlighted on the server with [Phiki](https://github.com/phikiphp/phiki), so the colours match
