@@ -6,10 +6,11 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const packageRoot = path.dirname(fileURLToPath(import.meta.url))
 
-// The editor's copy Composer installs when the package is checked out on its own (as in CI), or the editor's own
-// checkout next to this one in the workbench's packages/ directory.
+// The editor's copy Composer installs when the package is checked out on its own (as in CI), the host app's copy when
+// this package sits in its packages/ directory, or the editor's own checkout next to this one in the workbench.
 const sharedTiptapPath = [
     path.join(packageRoot, 'vendor/webwizardsusa/filament-rich-editor-plus/vite/shared-tiptap.js'),
+    path.join(packageRoot, '../../vendor/webwizardsusa/filament-rich-editor-plus/vite/shared-tiptap.js'),
     path.join(packageRoot, '../rich-editor-plus/vite/shared-tiptap.js'),
 ].find((candidate) => existsSync(candidate))
 
