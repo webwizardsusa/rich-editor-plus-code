@@ -38,6 +38,10 @@ Render with the same plugin, and add the styles once to the layout that shows th
 
 The full documentation is in the [`docs` folder](https://github.com/webwizardsusa/rich-editor-plus-code/tree/main/docs).
 
+## About Us
+
+This package is developed and maintained by [WebWizardsUSA](https://webwizardsusa.com/), a top rated web development agency on Upwork.
+
 ## License
 
 The MIT License (MIT). See [LICENSE.md](LICENSE.md).
